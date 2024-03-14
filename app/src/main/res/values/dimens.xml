@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="biggest">23sp</dimen>
+    <dimen name="bigger">20sp</dimen>
+    <dimen name="bigg">19sp</dimen>
+    <dimen name="big">17sp</dimen>
+    <dimen name="small">15sp</dimen>
+    <dimen name="smaller">14sp</dimen>
+    <dimen name="smallest">13sp</dimen>
+</resources>

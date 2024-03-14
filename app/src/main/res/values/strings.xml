@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FarmGPT</string>
+
+    <string name="you_ai_assistant">Your AI Assistant</string>
+    <string name="sub_heading">Using this app,you can ask your agriculture related questions and receive answers using the artificial intelligence assistant</string>
+    <string name="ask_question">Ask Question</string>
+    <string name="online">Online</string>
+    <string name="chats">There are many programming languages in the market that are used in designing and building websites, various applications and other tasks. All these languages are popular in their place and in the way they are used</string>
+    <string name="write_you_question">Write you question</string>
+    <string name="instructions">Instructions</string>
+    <string name="_1_write_a_question">1. Write a question</string>
+    <string name="_2_provide_the_category_and_sub_category">2. Provide the category and sub-category</string>
+    <string name="topic">3. Provide the topic and sub-topic</string>
+    <string name="location">4. Provide the target location (District)</string>
+</resources>
