@@ -60,7 +60,8 @@
                 android:textSize="@dimen/smallest"
                 android:hint="Type something"
                 android:fontFamily="@font/nunito_regular"
-                android:textColorHint="@color/grayText"
+                android:textColorHint="@color/grayText2"
+                android:textColor="@color/black2"
                 android:inputType="text"/>
 
             <TextView
@@ -83,7 +84,8 @@
                 android:textSize="@dimen/smallest"
                 android:hint="Type something"
                 android:fontFamily="@font/nunito_regular"
-                android:textColorHint="@color/grayText"
+                android:textColorHint="@color/grayText2"
+                android:textColor="@color/black2"
                 android:inputType="text"/>
 
             <TextView
@@ -106,7 +108,8 @@
                 android:textSize="@dimen/smallest"
                 android:hint="07xx-xxx-xxx"
                 android:fontFamily="@font/nunito_regular"
-                android:textColorHint="@color/grayText"
+                android:textColorHint="@color/grayText2"
+                android:textColor="@color/black2"
                 android:inputType="number"/>
 
             <TextView
@@ -176,7 +179,8 @@
                 android:textSize="@dimen/smallest"
                 android:hint="Type something"
                 android:fontFamily="@font/nunito_regular"
-                android:textColorHint="@color/grayText"
+                android:textColorHint="@color/grayText2"
+                android:textColor="@color/black2"
                 android:inputType="text"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout

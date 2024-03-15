@@ -61,7 +61,8 @@
                 android:textSize="@dimen/smallest"
                 android:hint="Type something"
                 android:fontFamily="@font/nunito_regular"
-                android:textColorHint="@color/grayText"
+                android:textColorHint="@color/grayText2"
+                android:textColor="@color/black2"
                 android:inputType="text"/>
 
             <TextView
@@ -89,7 +90,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:background="@drawable/primary_edit_text"
-                    android:textColor="@color/black"
+                    android:textColor="@color/black2"
                     android:fontFamily="@font/nunito_regular"
                     android:inputType="numberPassword"
                     android:textSize="@dimen/smallest"/>

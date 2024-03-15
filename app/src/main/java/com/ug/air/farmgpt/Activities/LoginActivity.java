@@ -89,12 +89,11 @@ public class LoginActivity extends AppCompatActivity {
                 btnSignIn.setEnabled(true);
                 progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()){
-                    Functions.showToast(LoginActivity.this, "Done");
-//                    editor.putString(USERNAME, username);
-//                    editor.apply();
-//
-//                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-//                    finish();
+                    editor.putString(USERNAME, username);
+                    editor.apply();
+
+                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    finish();
                 }
                 else {
                     try{
