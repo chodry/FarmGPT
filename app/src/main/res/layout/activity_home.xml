@@ -56,7 +56,6 @@
         android:textSize="@dimen/big"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        style="@style/Custom.OutlinedButton"
         android:backgroundTint="@color/blue"
         android:drawableEnd="@drawable/round_arrow"/>
 

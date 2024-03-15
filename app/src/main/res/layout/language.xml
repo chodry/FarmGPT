@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose"
+        android:textColor="@color/black3"
+        android:textSize="@dimen/small"
+        android:fontFamily="@font/nunito_bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/grayChat" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/english"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/smallest"
+            android:fontFamily="@font/nunito_medium"/>
+
+        <RadioButton
+            android:id="@+id/lug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/luganda"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/smallest"
+            android:fontFamily="@font/nunito_medium" />
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/ru"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:buttonTint="@color/green"-->
+<!--            android:text="Runyankole"-->
+<!--            android:textSize="14sp" />-->
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

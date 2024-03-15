@@ -15,4 +15,242 @@
     <string name="please_rate_the_answer">Please rate the answer</string>
     <string name="helpful">Helpful</string>
     <string name="not_helpful">Not helpful</string>
+    <string name="choose">Please choose the language in which you will be asking your questions.</string>
+    <string name="luganda">Luganda</string>
+    <string name="english">English</string>
+    <string name="cate">Please select a category where your question belongs</string>
+    <string name="topics">Please select the topic where your question belongs</string>
+
+    <string-array name="animal">
+        <item>Select one</item>
+        <item>Fish</item>
+        <item>Piggery</item>
+        <item>Rabbits</item>
+        <item>Sheep</item>
+        <item>Goats</item>
+        <item>Cattle</item>
+        <item>Chickens</item>
+        <item>Ducks</item>
+        <item>Bees</item>
+        <item>Grasshoppers</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="crops">
+        <item>Select one</item>
+        <item>Cassava</item>
+        <item>Maize</item>
+        <item>Beans</item>
+        <item>Millet</item>
+        <item>Sorghum</item>
+        <item>Ground nuts</item>
+        <item>Banana</item>
+        <item>Coffee</item>
+        <item>Rice</item>
+        <item>Sweet Potatoes</item>
+        <item>Others</item>
+    </string-array>
+
+    <string name="soil">Soil Preparation</string>
+    <string name="soil1">Digging/ Cultivation</string>
+    <string name="soil2">Fertilization</string>
+    <string name="soil3">Irrigation</string>
+    <string name="soil4">Soil testing</string>
+    <string name="soil5">Soil sterilization/ steaming</string>
+    <string name="soil6">Organic farming practices</string>
+
+    <string name="planting">Planting</string>
+    <string name="planting1">Seed selection</string>
+    <string name="planting2">Time of planting</string>
+    <string name="planting3">Seed treatment</string>
+    <string name="planting4">Planting methods</string>
+    <string name="planting5">Transplanting</string>
+    <string name="planting6">Inter-cropping</string>
+    <string name="planting7">Companion planting</string>
+
+    <string name="management">Crop Management</string>
+    <string name="management1">Pest management</string>
+    <string name="management2">Disease management</string>
+    <string name="management3">Nutrient management</string>
+    <string name="management4">Water management</string>
+    <string name="management5">Weed management</string>
+    <string name="management6">Crop rotation</string>
+    <string name="management7">Mulching</string>
+    <string name="management8">Pruning and Thinning</string>
+
+    <string name="harvesting">Harvesting</string>
+    <string name="harvesting1">Timing of harvest</string>
+    <string name="harvesting2">Harvesting techniques</string>
+    <string name="harvesting3">Post-harvest handling techniques</string>
+    <string name="harvesting4">Storage and preservation</string>
+    <string name="harvesting5">Grading and sorting</string>
+    <string name="harvesting6">Mechanical harvesting</string>
+
+    <string name="market">Marketing and Sales</string>
+    <string name="market1">Market research</string>
+    <string name="market2">Branding</string>
+    <string name="market3">Packaging and labeling</string>
+    <string name="market4">Distribution and transportation</string>
+    <string name="market5">Direct sales</string>
+    <string name="market6">Contract farming</string>
+    <string name="market7">Value added products</string>
+
+    <string name="crop">Crop Diversity</string>
+    <string name="crop1">Monoculture</string>
+    <string name="crop2">Poly-culture</string>
+    <string name="crop3">Horticulture</string>
+    <string name="crop4">Specialty crops</string>
+    <string name="crop5">Crop rotation strategies</string>
+    <string name="crop6">Risk Management</string>
+    <string name="crop7">Crop diversity benefits</string>
+    <string name="crop8">Sustainable agriculture practices</string>
+
+    <string name="genetically">Genetically Modified Crops (GMOs)</string>
+    <string name="genetically1">History and Controversy</string>
+    <string name="genetically2">Creation of GMOs</string>
+    <string name="genetically3">Pros and Cons of GMOs</string>
+    <string name="genetically4">Regulation and labeling</string>
+    <string name="genetically5">Biotechnology in agriculture</string>
+    <string name="genetically6">Future use of GMOs</string>
+
+    <string name="integrated">Integrated Pest Management (IPM)</string>
+    <string name="integrated1">Principles and Components</string>
+    <string name="integrated2">Biological Controls</string>
+    <string name="integrated3">Weed Control</string>
+    <string name="integrated4">Cultural Controls</string>
+    <string name="integrated5">Mechanical and Physical Controls</string>
+    <string name="integrated6">Chemical Controls</string>
+    <string name="integrated7">IPM products</string>
+    <string name="integrated8">IPM in Practice</string>
+
+    <string name="climate">Climate and Weather Impacts on Crop Farming</string>
+    <string name="climate1">Effects of Temperature and Precipitation</string>
+    <string name="climate2">Drought and Water Scarcity</string>
+    <string name="climate3">Extreme Weather Events</string>
+    <string name="climate4">Changing Seasons and Growing Periods</string>
+    <string name="climate5">Adapting to Climate Change</string>
+    <string name="climate6">Resilience in Crop Farming</string>
+
+    <string name="sustainable">Sustainable Agriculture</string>
+    <string name="sustainable1">Principles of Sustainability</string>
+    <string name="sustainable2">Conservation Practices</string>
+    <string name="sustainable3">Soil Health and Erosion Control</string>
+    <string name="sustainable4">Water Conservation and Management</string>
+    <string name="sustainable5">Biodiversity Conservation</string>
+    <string name="sustainable6">Economic and Social Sustainability</string>
+
+    <string name="equipment">Equipment and Technology</string>
+    <string name="equipment1">Tractors and Implements</string>
+    <string name="equipment2">Precision Agriculture Tools</string>
+    <string name="equipment3">GPS and GIS Mapping</string>
+    <string name="equipment4">Irrigation Systems</string>
+    <string name="equipment5">Harvesting Machinery</string>
+    <string name="equipment6">Farm Management Software</string>
+
+    <string name="government">Government Policies and Programs</string>
+    <string name="government1">Agricultural Subsidies</string>
+    <string name="government2">Crop Insurance</string>
+    <string name="government3">Conservation Programs</string>
+    <string name="government4">Trade Policies</string>
+    <string name="government5">Farm Bill</string>
+    <string name="government6">Agricultural Research and Development</string>
+
+    <!--    animal topics -->
+
+    <string name="livestock">Livestock selection and breeding</string>
+    <string name="livestock1">Animal characteristics and traits</string>
+    <string name="livestock2">Genetic testing and selection</string>
+    <string name="livestock3">Breeding methods</string>
+    <string name="livestock4">Healthy breeding herd</string>
+    <string name="livestock5">Record keeping for breeding</string>
+    <string name="livestock6">Artificial insemination</string>
+
+    <string name="housing">Animal housing and facilities</string>
+    <string name="housing1">Livestock housing design</string>
+    <string name="housing2">Types of housing</string>
+    <string name="housing3">Ventilation and temperature</string>
+    <string name="housing4">Sanitation and waste management</string>
+    <string name="housing5">Fencing and gate maintenance</string>
+    <string name="housing6">Animal welfare considerations</string>
+
+    <string name="feed">Feed and nutrition</string>
+    <string name="feed1">Nutrient requirements</string>
+    <string name="feed2">Types of feed</string>
+    <string name="feed3">Feed storage and management</string>
+    <string name="feed4">Grazing management</string>
+    <string name="feed5">Managing feed costs</string>
+    <string name="feed6">Preventing nutritional deficiencies</string>
+
+    <string name="health">Health and disease management</string>
+    <string name="health1">Vaccinations and preventative care</string>
+    <string name="health2">Parasite control</string>
+    <string name="health3">Bio-security measures</string>
+    <string name="health4">Quarantine procedures</string>
+    <string name="health5">Disease diagnosis and treatment</string>
+    <string name="health6">Veterinary care</string>
+
+    <string name="birthing">Reproduction and birthing</string>
+    <string name="birthing1">Breeding and reproduction management</string>
+    <string name="birthing2">Pregnancy and gestation care</string>
+    <string name="birthing3">Parturition and labor assistance</string>
+    <string name="birthing4">Calf and lamb care</string>
+    <string name="birthing5">Post-birth care for dams</string>
+    <string name="birthing6">Reproductive health management</string>
+
+    <string name="pasture">Pasture and grazing management</string>
+    <string name="pasture1">Rotational grazing systems</string>
+    <string name="pasture2">Pasture renovation and maintenance</string>
+    <string name="pasture3">Managing forage species</string>
+    <string name="pasture4">Grazing strategies</string>
+    <string name="pasture5">Soil health and fertility</string>
+    <string name="pasture6">Utilizing alternative forages</string>
+
+    <string name="handling">Handling and husbandry practices</string>
+    <string name="handling1">Training for safe handling</string>
+    <string name="handling2">Proper animal restraint</string>
+    <string name="handling3">Identifying and treating injuries</string>
+    <string name="handling4">Managing difficult animals</string>
+    <string name="handling5">Behavioral management</string>
+    <string name="handling6">Low-stress animal handling</string>
+
+    <string name="sales">Marketing and sales</string>
+    <string name="sales1">Target markets</string>
+    <string name="sales2">Buyer relationships</string>
+    <string name="sales3">Pricing strategies</string>
+    <string name="sales4">Packaging and labelling</string>
+    <string name="sales5">Marketing plan</string>
+    <string name="sales6">Direct sales</string>
+
+    <string name="technology">Technology in animal farming</string>
+    <string name="technology1">Drone and GPS</string>
+    <string name="technology2">Sensor monitoring</string>
+    <string name="technology3">Digital record-keeping</string>
+    <string name="technology4">Precision feeding</string>
+    <string name="technology5">Efficient animal care</string>
+    <string name="technology6">Animal welfare tech</string>
+
+    <string name="farming">Sustainable animal farming practices</string>
+    <string name="farming1">Alternative housing methods</string>
+    <string name="farming2">Conservation grazing</string>
+    <string name="farming3">Renewable resources</string>
+    <string name="farming4">Composting and waste</string>
+    <string name="farming5">Sustainable standards</string>
+    <string name="farming6">Environmental impact</string>
+
+    <string name="animal">Animal transportation and handling</string>
+    <string name="animal1">Transport regulations</string>
+    <string name="animal2">Loading and unloading</string>
+    <string name="animal3">Animal welfare</string>
+    <string name="animal4">Transportation vehicles</string>
+    <string name="animal5">Handling procedures</string>
+    <string name="animal6">Documentation and records</string>
+
+    <string name="business">Business management for animal farming</string>
+    <string name="business1">Financial planning</string>
+    <string name="business2">Cash flow management</string>
+    <string name="business3">Bookkeeping</string>
+    <string name="business4">Risk management</string>
+    <string name="business5">Employee management</string>
+    <string name="business6">Business evaluation</string>
+
 </resources>

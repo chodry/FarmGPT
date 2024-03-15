@@ -1,6 +1,8 @@
 package com.ug.air.farmgpt.Api;
 
 import com.ug.air.farmgpt.Models.Auth;
+import com.ug.air.farmgpt.Models.Chat;
+import com.ug.air.farmgpt.Models.Gpt;
 import com.ug.air.farmgpt.Models.Login;
 import com.ug.air.farmgpt.Models.User;
 
@@ -27,5 +29,7 @@ public interface JsonPlaceHolder {
     Call<Auth> login(@Body Login login);
 
 
+    @POST("query/")
+    Call<Gpt> sendQuery(@Body Chat chat);
 
 }
