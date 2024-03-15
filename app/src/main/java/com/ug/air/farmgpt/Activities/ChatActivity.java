@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.ug.air.farmgpt.R;
+import com.ug.air.farmgpt.Utils.Functions;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -43,7 +44,7 @@ public class ChatActivity extends AppCompatActivity {
             question = editText.getText().toString().trim();
             
             if (question.isEmpty()) {
-                showToast("Please provide a question");
+                Functions.showToast(this, "Please provide a question");
             }
             else {
                 openDialog();
@@ -55,7 +56,5 @@ public class ChatActivity extends AppCompatActivity {
     private void openDialog() {
     }
 
-    private void showToast(String message) {
-        Toast.makeText(ChatActivity.this, message, Toast.LENGTH_SHORT).show();
-    }
+
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/please_rate_the_answer"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/smallest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/helpful"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@id/not_helpful"
+        app:layout_constraintStart_toStartOf="@id/heading"
+        android:src="@drawable/round_thumb_up"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/helpful"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="@dimen/smallest"
+        android:textColor="@color/black3"
+        app:layout_constraintTop_toBottomOf="@id/helpful"
+        app:layout_constraintStart_toStartOf="@id/helpful"
+        app:layout_constraintEnd_toEndOf="@id/helpful"/>
+
+    <ImageView
+        android:id="@+id/not_helpful"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/helpful"
+        app:layout_constraintEnd_toEndOf="@id/heading"
+        android:src="@drawable/round_thumb_down_24"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_helpful"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="@dimen/smallest"
+        android:textColor="@color/black3"
+        app:layout_constraintTop_toBottomOf="@id/not_helpful"
+        app:layout_constraintStart_toStartOf="@id/not_helpful"
+        app:layout_constraintEnd_toEndOf="@id/not_helpful"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

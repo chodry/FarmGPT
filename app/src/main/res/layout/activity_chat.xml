@@ -88,13 +88,15 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            tools:listitem="@layout/bot_layout"/>
 
         <LinearLayout
             android:id="@+id/instruct"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
             
             <ImageView
                 android:layout_width="28dp"

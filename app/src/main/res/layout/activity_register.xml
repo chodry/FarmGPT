@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="true"
+        android:padding="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="@dimen/bigg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Provide your information below"
+                android:fontFamily="@font/nunito_medium"
+                android:textSize="@dimen/smaller"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grayText"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First name"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/smallest"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/black3"/>
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@drawable/primary_edit_text"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/smallest"
+                android:hint="Type something"
+                android:fontFamily="@font/nunito_regular"
+                android:textColorHint="@color/grayText"
+                android:inputType="text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last name"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/smallest"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black3"/>
+
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@drawable/primary_edit_text"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/smallest"
+                android:hint="Type something"
+                android:fontFamily="@font/nunito_regular"
+                android:textColorHint="@color/grayText"
+                android:inputType="text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telephone number"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/smallest"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black3"/>
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@drawable/primary_edit_text"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/smallest"
+                android:hint="07xx-xxx-xxx"
+                android:fontFamily="@font/nunito_regular"
+                android:textColorHint="@color/grayText"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/smallest"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/primary_edit_text"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age Group"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/smallest"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/primary_edit_text"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <Spinner
+                    android:id="@+id/spinner_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="District"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/smallest"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black3"/>
+
+            <EditText
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@drawable/primary_edit_text"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/smallest"
+                android:hint="Type something"
+                android:fontFamily="@font/nunito_regular"
+                android:textColorHint="@color/grayText"
+                android:inputType="text"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Sign up"
+                    android:id="@+id/btnsign"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textSize="@dimen/big"
+                    android:enabled="true"
+                    android:backgroundTint="@color/blue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@id/btnsign"
+                    app:layout_constraintBottom_toBottomOf="@id/btnsign"
+                    app:layout_constraintEnd_toEndOf="@id/btnsign"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="@dimen/small"
+                    android:textColor="@color/blue"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

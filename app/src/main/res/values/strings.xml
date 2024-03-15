@@ -12,4 +12,7 @@
     <string name="_2_provide_the_category_and_sub_category">2. Provide the category and sub-category</string>
     <string name="topic">3. Provide the topic and sub-topic</string>
     <string name="location">4. Provide the target location (District)</string>
+    <string name="please_rate_the_answer">Please rate the answer</string>
+    <string name="helpful">Helpful</string>
+    <string name="not_helpful">Not helpful</string>
 </resources>
