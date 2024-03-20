@@ -1,8 +1,10 @@
 package com.ug.air.farmgpt.Activities;
 
 import static com.ug.air.farmgpt.Activities.SplashActivity.SHARED_PREFS;
+import static com.ug.air.farmgpt.Activities.SplashActivity.USERNAME;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -35,12 +37,14 @@ import android.widget.TextView;
 import com.ug.air.farmgpt.Adapters.ChatAdapter;
 import com.ug.air.farmgpt.Adapters.SpinnerAdapter;
 import com.ug.air.farmgpt.Models.Chat;
+import com.ug.air.farmgpt.Models.Feedback;
 import com.ug.air.farmgpt.Models.Gpt;
 import com.ug.air.farmgpt.Models.GptResponse;
 import com.ug.air.farmgpt.Models.Question;
+import com.ug.air.farmgpt.Models.Rate;
 import com.ug.air.farmgpt.R;
 import com.ug.air.farmgpt.Utils.Functions;
-import com.ug.air.farmgpt.Utils.Item;
+import com.ug.air.farmgpt.Models.Item;
 import com.ug.air.farmgpt.Utils.SystemProgressDialog;
 
 import java.util.ArrayList;
@@ -53,12 +57,14 @@ import retrofit2.Response;
 public class ChatActivity extends AppCompatActivity {
 
     ImageView btnBack, btnSend, btnChange;
+    CardView addView, writeView;
     Button btnContinue;
     RadioGroup radioGroup;
     RecyclerView responseRecyclerView;
     LinearLayout instructLinearLayout;
     EditText editText;
-    String question, language, category, subCategory, topic, subTopic, location, answer;
+    int response_id;
+    String question, language, category, subCategory, topic, subTopic, location, answer, username, feedback;
     ChatAdapter chatAdapter;
     List<Item> itemList;
     LinearLayoutManager layoutManager;
@@ -70,6 +76,7 @@ public class ChatActivity extends AppCompatActivity {
     public static final String SUB_CATEGORY = "sub_category";
     public static final String OTHER = "other";
     ArrayAdapter<CharSequence> adapter;
+    int position_id, feedback_id;
     List<String> checkBoxList = new ArrayList<>();
 
     @Override
@@ -93,14 +100,23 @@ public class ChatActivity extends AppCompatActivity {
         sharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
+        username = sharedPreferences.getString(USERNAME, "");
+
         progressDialog = new SystemProgressDialog(ChatActivity.this);
 
         btnBack = findViewById(R.id.back);
+        addView = findViewById(R.id.add);
+        writeView = findViewById(R.id.write);
         responseRecyclerView = findViewById(R.id.recyclerView);
         instructLinearLayout = findViewById(R.id.instruct);
         btnSend = findViewById(R.id.send);
         btnChange = findViewById(R.id.change);
         editText = findViewById(R.id.edit_question);
+
+        addView.setOnClickListener(view -> {
+            addView.setVisibility(View.GONE);
+            writeView.setVisibility(View.VISIBLE);
+        });
 
         btnBack.setOnClickListener(view -> {
             startActivity(new Intent(ChatActivity.this, HomeActivity.class));
@@ -113,7 +129,14 @@ public class ChatActivity extends AppCompatActivity {
                 Functions.showToast(this, "Please provide a question");
             }
             else {
-                selectCategory();
+                int count = Functions.countWordsInSentence(question);
+                if (count <= 4){
+                    Functions.showToast(ChatActivity.this, "Your question should be more than 4 words");
+                }
+                else {
+                    selectCategory();
+                }
+
             }
             
         });
@@ -135,6 +158,23 @@ public class ChatActivity extends AppCompatActivity {
         if (language.isEmpty()){
             showDialog();
         }
+
+        chatAdapter.setOnItemClickListener(new ChatAdapter.OnItemClickListener() {
+            @Override
+            public void onLikeClick(int position) {
+                feedback = "Helpful";
+                sendRating(feedback);
+
+            }
+
+            @Override
+            public void onDisLikeClick(int position) {
+                feedback = "Not helpful";
+                sendRating(feedback);
+            }
+        });
+
+
     }
 
     private void showDialog() {
@@ -475,7 +515,7 @@ public class ChatActivity extends AppCompatActivity {
         progressDialog.showProgressDialog(null);
 
         Question qn = new Question(question);
-        Item item = new Item(0, qn);
+        Item item = new Item(0, qn, "", 0);
         itemList.add(item);
         chatAdapter.notifyDataSetChanged();
 
@@ -484,7 +524,7 @@ public class ChatActivity extends AppCompatActivity {
             responseRecyclerView.setVisibility(View.VISIBLE);
         }
 
-        Chat chat = new Chat(question, language, category, subCategory, topic, subTopic, location, true);
+        Chat chat = new Chat(username, question, language, category, subCategory, topic, subTopic, location, true);
 //        Chat chat = new Chat(question, "English", "crop", "beans", "planting", "planting", "kampala", true);
         Call<Gpt> call = Functions.jsonPlaceHolder("chat").sendQuery(chat);
         call.enqueue(new Callback<Gpt>() {
@@ -493,15 +533,25 @@ public class ChatActivity extends AppCompatActivity {
                 progressDialog.closeProgressDialog();
                 if (response.isSuccessful()){
                     answer = response.body().getAnswer();
+                    response_id = response.body().getResponse_id();
                     GptResponse response1 = new GptResponse(answer, "");
-                    Item item = new Item(1, response1);
+                    Item item = new Item(1, response1, "", 0);
                     itemList.add(item);
+                    position_id = itemList.indexOf(item);
+
+                    Feedback feedback = new Feedback(true);
+                    Item item1 = new Item(2, feedback, "", 0);
+                    itemList.add(item1);
+                    feedback_id = itemList.indexOf(item1);
+
                     chatAdapter.notifyDataSetChanged();
 
                     if (!isVisible()){
                         responseRecyclerView.smoothScrollToPosition(chatAdapter.getItemCount()-1);
                     }
                     editText.setText("");
+                    writeView.setVisibility(View.GONE);
+                    addView.setVisibility(View.GONE);
                 }
                 else {
                     int code = response.code();
@@ -524,6 +574,43 @@ public class ChatActivity extends AppCompatActivity {
         int positionOfLastVisibleItem = linearLayoutManager.findLastCompletelyVisibleItemPosition();
         int itemCount = responseRecyclerView.getAdapter().getItemCount();
         return (positionOfLastVisibleItem>=itemCount);
+    }
+
+    private void sendRating(String feedback) {
+        progressDialog.showProgressDialog(null);
+
+        Rate rate = new Rate(response_id, feedback);
+        Call<String> call = Functions.jsonPlaceHolder("chat").rate_response(rate);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                progressDialog.closeProgressDialog();
+                if (response.isSuccessful()){
+                    int imageResource;
+                    if (feedback.equals("Helpful")){
+                        imageResource = R.drawable.read;
+                    }
+                    else {
+                        imageResource = R.drawable.round_cancel_24;
+                    }
+                    chatAdapter.updateImage(position_id, feedback, imageResource);
+                    chatAdapter.deleteItem(feedback_id);
+                    addView.setVisibility(View.VISIBLE);
+                }
+                else {
+                    addView.setVisibility(View.VISIBLE);
+                    int code = response.code();
+                    Functions.showToast(ChatActivity.this, "Error code: " + code);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                addView.setVisibility(View.VISIBLE);
+                progressDialog.closeProgressDialog();
+                Functions.showToast(ChatActivity.this, "Something went wrong, Please try again later");
+            }
+        });
     }
 
 }

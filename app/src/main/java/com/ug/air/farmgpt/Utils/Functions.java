@@ -225,4 +225,16 @@ public class Functions {
 
     }
 
+    public static int countWordsInSentence(String sentence) {
+        if (sentence == null || sentence.trim().isEmpty()) {
+            return 0;
+        }
+
+        // Split the sentence into words using space as the delimiter
+        String[] words = sentence.trim().split("\\s+");
+
+        // Return the number of words
+        return words.length;
+    }
+
 }

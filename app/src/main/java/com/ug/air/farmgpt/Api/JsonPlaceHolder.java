@@ -4,6 +4,7 @@ import com.ug.air.farmgpt.Models.Auth;
 import com.ug.air.farmgpt.Models.Chat;
 import com.ug.air.farmgpt.Models.Gpt;
 import com.ug.air.farmgpt.Models.Login;
+import com.ug.air.farmgpt.Models.Rate;
 import com.ug.air.farmgpt.Models.User;
 
 import java.util.List;
@@ -28,8 +29,10 @@ public interface JsonPlaceHolder {
     @POST("api/v1/auth/login")
     Call<Auth> login(@Body Login login);
 
-
     @POST("query/")
     Call<Gpt> sendQuery(@Body Chat chat);
+
+    @POST("rate_response")
+    Call<String> rate_response(@Body Rate rate);
 
 }
