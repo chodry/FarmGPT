@@ -12,8 +12,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
-    private static final String BASE_URL_ACCOUNT = "http://35.239.70.68:5000";
-    private static final String BASE_URL_CHAT = "http://35.239.70.68:8000";
+    private static final String BASE_URL_ACCOUNT = "http://35.232.247.73:5000";
+    private static final String BASE_URL_CHAT = "http://35.232.247.73:8000";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClientAccount() {
